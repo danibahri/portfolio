@@ -23,6 +23,74 @@
   scroll-behavior: smooth;
 }
 
+/* Enhanced animations for portfolio */
+@keyframes blob {
+  0% {
+    transform: translate(0px, 0px) scale(1);
+  }
+  33% {
+    transform: translate(30px, -50px) scale(1.1);
+  }
+  66% {
+    transform: translate(-20px, 20px) scale(0.9);
+  }
+  100% {
+    transform: translate(0px, 0px) scale(1);
+  }
+}
+
+@keyframes gradient-x {
+  0%,
+  100% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+}
+
+@keyframes float {
+  0%,
+  100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+@keyframes countUp {
+  from {
+    transform: translateY(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.animate-blob {
+  animation: blob 7s infinite;
+}
+
+.animation-delay-2000 {
+  animation-delay: 2s;
+}
+
+.animation-delay-4000 {
+  animation-delay: 4s;
+}
+
+.animate-gradient-x {
+  background-size: 400% 400%;
+  animation: gradient-x 3s ease infinite;
+}
+
+.animate-count-up {
+  animation: countUp 2s ease-out;
+}
+
 /* Card hover effects */
 .hover-lift:hover {
   transform: translateY(-4px);
@@ -88,14 +156,138 @@
   left: 100%;
 }
 
-/* Loading animation */
-@keyframes float {
-  0%,
-  100% {
-    transform: translateY(0px);
+.float-animation {
+  animation: float 3s ease-in-out infinite;
+}
+
+/* Infinite scrolling animation for skills */
+.infinite-scroll {
+  overflow: hidden;
+  white-space: nowrap;
+  position: relative;
+}
+
+.infinite-scroll::before,
+.infinite-scroll::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  width: 100px;
+  height: 100%;
+  z-index: 10;
+  pointer-events: none;
+}
+
+.infinite-scroll::before {
+  left: 0;
+  background: linear-gradient(to right, #f9fafb, transparent);
+}
+
+.infinite-scroll::after {
+  right: 0;
+  background: linear-gradient(to left, #f9fafb, transparent);
+}
+
+.scroll-container {
+  display: flex;
+  animation: scroll-left 30s linear infinite;
+  gap: 1rem;
+}
+
+.scroll-container:hover {
+  animation-play-state: paused;
+}
+
+@keyframes scroll-left {
+  0% {
+    transform: translateX(0);
   }
-  50% {
-    transform: translateY(-10px);
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.skill-item {
+  flex: 0 0 auto;
+  min-width: 120px;
+  background: white;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.skill-item:hover {
+  transform: translateY(-5px) scale(1.05);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+}
+
+.skill-item i {
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+  display: block;
+}
+
+.skill-item p {
+  font-size: 0.875rem;
+  font-weight: 500;
+  margin: 0;
+}
+
+/* Skill card animations */
+.skill-card {
+  transition: all 0.3s ease;
+}
+
+.skill-card:hover {
+  transform: translateY(-5px) scale(1.05);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+/* Project card animations */
+.project-card {
+  transition: all 0.3s ease;
+}
+
+.project-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+}
+
+/* Professional enhancements */
+.glass-effect {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.text-shadow {
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Responsive design improvements */
+@media (max-width: 768px) {
+  .typing-animation {
+    font-size: 1.2rem;
+  }
+
+  .hero-title {
+    font-size: 2.5rem;
+  }
+
+  .scroll-container {
+    animation-duration: 20s;
+  }
+
+  .skill-item {
+    min-width: 100px;
+    padding: 0.75rem;
+  }
+
+  .skill-item i {
+    font-size: 2rem;
   }
 }
 

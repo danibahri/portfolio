@@ -113,105 +113,371 @@
         </div>
       </nav>
     </header>
-    <main class="pt-16">
+    <main>
       <!-- Hero Section -->
       <section
         id="home"
-        class="min-h-screen flex items-center bg-gradient-to-br from-blue-50 via-white to-purple-50"
+        class="min-h-screen flex items-center relative overflow-hidden bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"
       >
-        <div class="container mx-auto px-4 py-16">
-          <div class="max-w-4xl mx-auto text-center">
-            <h1 class="text-4xl md:text-6xl font-bold text-gray-900 mb-4">
-              Hi, I'm
-              <span
-                class="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-purple-600"
-                >Ahmad Ramadani Bahri</span
-              >
-            </h1>
-            <div
-              class="text-xl md:text-2xl text-gray-600 mb-8 typing-animation"
-            >
-              <span id="typing-text">Junior Web Developer</span>
-            </div>
-            <p class="text-lg text-gray-700 mb-8 max-w-2xl mx-auto">
-              A passionate Informatics Engineering student at Universitas
-              Trunojoyo Madura, aspiring to become a Full Stack Developer with
-              expertise in Laravel, PHP, and modern web technologies.
-            </p>
-            <div class="flex flex-wrap justify-center gap-4">
-              <a
-                href="#projects"
-                class="bg-blue-600 hover:bg-blue-700 text-white font-medium py-3 px-8 rounded-lg transition-colors duration-300"
-              >
-                <i class="fas fa-code mr-2"></i>View My Work
-              </a>
-              <a
-                href="#contact"
-                class="border-2 border-blue-600 text-blue-600 hover:bg-blue-600 hover:text-white font-medium py-3 px-8 rounded-lg transition-colors duration-300"
-              >
-                <i class="fas fa-envelope mr-2"></i>Get In Touch
-              </a>
+        <!-- Animated background -->
+        <div
+          class="absolute inset-0 bg-gradient-to-br from-blue-600/20 via-purple-600/20 to-indigo-600/20"
+        ></div>
+        <div class="absolute inset-0">
+          <div
+            class="absolute top-10 left-10 w-72 h-72 bg-purple-300 rounded-full mix-blend-multiply filter blur-xl opacity-70 animate-blob"
+          ></div>
+          <div
+            class="absolute top-0 right-4 w-72 h-72 bg-yellow-300 rounded-full mix-blend-multiply filter blur-xl opacity-70 animate-blob animation-delay-2000"
+          ></div>
+          <div
+            class="absolute -bottom-8 left-20 w-72 h-72 bg-pink-300 rounded-full mix-blend-multiply filter blur-xl opacity-70 animate-blob animation-delay-4000"
+          ></div>
+        </div>
+
+        <div class="container mx-auto px-4 py-16 relative z-10">
+          <div class="max-w-6xl mx-auto">
+            <div class="grid lg:grid-cols-2 gap-12 items-center">
+              <!-- Left Content -->
+              <div class="text-left">
+                <div
+                  class="inline-flex items-center px-4 py-2 bg-purple-100 rounded-full text-purple-800 text-sm font-medium mb-6"
+                >
+                  <span
+                    class="w-2 h-2 bg-green-400 rounded-full mr-2 animate-pulse"
+                  ></span>
+                  Available for Internship
+                </div>
+
+                <h1
+                  class="text-4xl md:text-6xl font-bold text-white mb-6 leading-tight"
+                >
+                  Hi, I'm
+                  <span
+                    class="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 via-purple-400 to-pink-400 animate-gradient-x"
+                  >
+                    Ahmad Ramadani Bahri
+                  </span>
+                </h1>
+
+                <div
+                  class="text-xl md:text-2xl text-gray-300 mb-6 typing-animation"
+                >
+                  <span id="typing-text">Junior Web Developer</span>
+                </div>
+
+                <p class="text-lg text-gray-300 mb-8 leading-relaxed">
+                  A passionate Informatics Engineering student at
+                  <span class="text-blue-400 font-semibold"
+                    >Universitas Trunojoyo Madura</span
+                  >, aspiring to become a Full Stack Developer with expertise in
+                  Laravel, PHP, and modern web technologies.
+                </p>
+
+                <!-- Statistics
+                <div class="grid grid-cols-3 gap-6 mb-8">
+                  <div
+                    class="text-center p-4 bg-white/10 backdrop-blur-sm rounded-lg border border-white/20"
+                  >
+                    <div
+                      class="text-2xl md:text-3xl font-bold text-white mb-1"
+                      data-count="10"
+                    >
+                      0
+                    </div>
+                    <div class="text-sm text-gray-300">Projects Completed</div>
+                  </div>
+                  <div
+                    class="text-center p-4 bg-white/10 backdrop-blur-sm rounded-lg border border-white/20"
+                  >
+                    <div
+                      class="text-2xl md:text-3xl font-bold text-white mb-1"
+                      data-count="5"
+                    >
+                      0
+                    </div>
+                    <div class="text-sm text-gray-300">
+                      Technologies Mastered
+                    </div>
+                  </div>
+                  <div
+                    class="text-center p-4 bg-white/10 backdrop-blur-sm rounded-lg border border-white/20"
+                  >
+                    <div
+                      class="text-2xl md:text-3xl font-bold text-white mb-1"
+                      data-count="2"
+                    >
+                      0
+                    </div>
+                    <div class="text-sm text-gray-300">Years Experience</div>
+                  </div>
+                </div> -->
+
+                <div class="flex flex-wrap gap-4">
+                  <a
+                    href="#projects"
+                    class="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white font-medium py-3 px-8 rounded-lg transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl"
+                  >
+                    <i class="fas fa-code mr-2"></i>View My Work
+                  </a>
+                  <a
+                    href="#contact"
+                    class="border-2 border-white/30 text-white hover:bg-white hover:text-gray-900 font-medium py-3 px-8 rounded-lg transition-all duration-300 backdrop-blur-sm"
+                  >
+                    <i class="fas fa-envelope mr-2"></i>Get In Touch
+                  </a>
+                  <a
+                    href="./cv.pdf"
+                    target="_blank"
+                    class="bg-green-600 hover:bg-green-700 text-white font-medium py-3 px-8 rounded-lg transition-all duration-300 transform hover:scale-105 shadow-lg"
+                  >
+                    <i class="fas fa-download mr-2"></i>Download CV
+                  </a>
+                </div>
+              </div>
+
+              <!-- Right Content - Professional Image/Avatar -->
+              <div class="text-center lg:text-right">
+                <div class="relative inline-block">
+                  <div
+                    class="w-80 h-80 mx-auto bg-gradient-to-br from-blue-400 via-purple-500 to-pink-500 rounded-full p-1 shadow-2xl"
+                  >
+                    <div
+                      class="w-full h-full bg-gray-800 rounded-full flex items-center justify-center relative overflow-hidden"
+                    >
+                      <i class="fas fa-user text-8xl text-white/50"></i>
+                      <!-- You can replace this with your actual photo -->
+                      <div
+                        class="absolute inset-0 bg-gradient-to-br from-blue-600/20 to-purple-600/20"
+                      ></div>
+                    </div>
+                  </div>
+                  <!-- Floating elements -->
+                  <div
+                    class="absolute -top-4 -right-4 w-16 h-16 bg-blue-500 rounded-lg shadow-lg flex items-center justify-center transform rotate-12 animate-bounce"
+                  >
+                    <i class="fab fa-laravel text-2xl text-white"></i>
+                  </div>
+                  <div
+                    class="absolute -bottom-4 -left-4 w-16 h-16 bg-purple-500 rounded-lg shadow-lg flex items-center justify-center transform -rotate-12 animate-bounce animation-delay-2000"
+                  >
+                    <i class="fab fa-php text-2xl text-white"></i>
+                  </div>
+                  <div
+                    class="absolute top-1/2 -right-8 w-12 h-12 bg-yellow-500 rounded-lg shadow-lg flex items-center justify-center transform rotate-45 animate-pulse"
+                  >
+                    <i class="fab fa-js-square text-xl text-white"></i>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
+        </div>
+
+        <!-- Scroll indicator -->
+        <div
+          class="absolute bottom-8 left-1/2 transform -translate-x-1/2 text-white animate-bounce"
+        >
+          <i class="fas fa-chevron-down text-2xl"></i>
         </div>
       </section>
 
       <!-- About Section -->
-      <section id="about" class="py-16 bg-white">
-        <div class="container mx-auto px-4">
-          <div class="max-w-4xl mx-auto">
-            <h2
-              class="text-3xl md:text-4xl font-bold text-center text-gray-900 mb-8"
-            >
-              About Me
-            </h2>
-            <div class="grid md:grid-cols-2 gap-8 items-center">
-              <div class="space-y-6 text-justify">
-                <p class="text-lg text-gray-700">
-                  I'm a passionate <strong>Junior Web Developer</strong> and
-                  Informatics Engineering student at
-                  <strong>Universitas Trunojoyo Madura</strong> with a strong
-                  ambition to become a <strong>Full Stack Developer</strong>.
-                </p>
-                <p class="text-lg text-gray-700">
-                  I love building web applications and I'm constantly learning
-                  new technologies to expand my skill set. My goal is to master
-                  both frontend and backend development to create complete,
-                  scalable web solutions.
-                </p>
-                <div class="grid grid-cols-2 gap-4">
-                  <div class="bg-blue-50 p-4 rounded-lg">
-                    <h3 class="font-semibold text-blue-900 mb-2">
-                      Current Focus
-                    </h3>
+      <section
+        id="about"
+        class="py-20 bg-gradient-to-br from-white to-gray-50 relative"
+      >
+        <div
+          class="absolute top-0 left-0 w-full h-full overflow-hidden pointer-events-none"
+        >
+          <div
+            class="absolute top-20 left-10 w-32 h-32 bg-blue-100 rounded-full opacity-50"
+          ></div>
+          <div
+            class="absolute bottom-20 right-10 w-40 h-40 bg-purple-100 rounded-full opacity-50"
+          ></div>
+        </div>
+
+        <div class="container mx-auto px-4 relative z-10">
+          <div class="max-w-6xl mx-auto">
+            <div class="text-center mb-16">
+              <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+                About Me
+              </h2>
+              <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                Passionate about creating innovative web solutions and
+                constantly learning new technologies
+              </p>
+            </div>
+
+            <div class="grid lg:grid-cols-2 gap-12 items-center">
+              <div class="space-y-8">
+                <div class="prose prose-lg">
+                  <p class="text-lg text-gray-700 leading-relaxed">
+                    I'm a passionate
+                    <strong class="text-blue-600">Junior Web Developer</strong>
+                    and Informatics Engineering student at
+                    <strong class="text-purple-600"
+                      >Universitas Trunojoyo Madura</strong
+                    >
+                    with a strong ambition to become a
+                    <strong class="text-indigo-600">Full Stack Developer</strong
+                    >.
+                  </p>
+                  <p class="text-lg text-gray-700 leading-relaxed">
+                    I love building web applications and I'm constantly learning
+                    new technologies to expand my skill set. My goal is to
+                    master both frontend and backend development to create
+                    complete, scalable web solutions.
+                  </p>
+                </div>
+
+                <!-- Achievement Cards -->
+                <div class="grid md:grid-cols-2 gap-6">
+                  <div
+                    class="bg-gradient-to-br from-blue-50 to-blue-100 p-6 rounded-xl border border-blue-200 hover:shadow-lg transition-all duration-300"
+                  >
+                    <div class="flex items-center mb-3">
+                      <div
+                        class="w-10 h-10 bg-blue-500 rounded-lg flex items-center justify-center mr-3"
+                      >
+                        <i class="fas fa-target text-white"></i>
+                      </div>
+                      <h3 class="font-semibold text-blue-900">Current Focus</h3>
+                    </div>
                     <p class="text-sm text-blue-800">
                       Full-stack development with Laravel & JavaScript
                     </p>
                   </div>
-                  <div class="bg-purple-50 p-4 rounded-lg">
-                    <h3 class="font-semibold text-purple-900 mb-2">Learning</h3>
+
+                  <div
+                    class="bg-gradient-to-br from-purple-50 to-purple-100 p-6 rounded-xl border border-purple-200 hover:shadow-lg transition-all duration-300"
+                  >
+                    <div class="flex items-center mb-3">
+                      <div
+                        class="w-10 h-10 bg-purple-500 rounded-lg flex items-center justify-center mr-3"
+                      >
+                        <i class="fas fa-graduation-cap text-white"></i>
+                      </div>
+                      <h3 class="font-semibold text-purple-900">Learning</h3>
+                    </div>
                     <p class="text-sm text-purple-800">
                       Modern web architectures & deployment practices
                     </p>
                   </div>
+
+                  <div
+                    class="bg-gradient-to-br from-green-50 to-green-100 p-6 rounded-xl border border-green-200 hover:shadow-lg transition-all duration-300"
+                  >
+                    <div class="flex items-center mb-3">
+                      <div
+                        class="w-10 h-10 bg-green-500 rounded-lg flex items-center justify-center mr-3"
+                      >
+                        <i class="fas fa-handshake text-white"></i>
+                      </div>
+                      <h3 class="font-semibold text-green-900">
+                        Internship Ready
+                      </h3>
+                    </div>
+                    <p class="text-sm text-green-800">
+                      Looking for opportunities to grow and contribute
+                    </p>
+                  </div>
+
+                  <div
+                    class="bg-gradient-to-br from-orange-50 to-orange-100 p-6 rounded-xl border border-orange-200 hover:shadow-lg transition-all duration-300"
+                  >
+                    <div class="flex items-center mb-3">
+                      <div
+                        class="w-10 h-10 bg-orange-500 rounded-lg flex items-center justify-center mr-3"
+                      >
+                        <i class="fas fa-code text-white"></i>
+                      </div>
+                      <h3 class="font-semibold text-orange-900">Portfolio</h3>
+                    </div>
+                    <p class="text-sm text-orange-800">
+                      10+ completed projects showcasing various skills
+                    </p>
+                  </div>
                 </div>
               </div>
-              <div
-                class="bg-gradient-to-br from-blue-100 to-purple-100 p-8 rounded-2xl"
-              >
-                <div class="text-center">
-                  <div
-                    class="w-32 h-32 bg-gradient-to-r from-blue-500 to-purple-600 rounded-full mx-auto mb-4 flex items-center justify-center"
-                  >
-                    <i class="fas fa-user text-white text-4xl"></i>
+
+              <!-- Enhanced Profile Card -->
+              <div class="relative">
+                <div
+                  class="bg-gradient-to-br from-blue-500 via-purple-500 to-indigo-600 p-8 rounded-3xl shadow-2xl text-white relative overflow-hidden"
+                >
+                  <div class="absolute inset-0 opacity-10">
+                    <div
+                      class="absolute top-0 left-0 w-full h-full bg-gradient-to-br from-white/20 to-transparent"
+                    ></div>
                   </div>
-                  <h3 class="text-2xl font-bold text-gray-900 mb-2">
-                    Ahmad Ramadani Bahri
-                  </h3>
-                  <p class="text-gray-600 mb-4">
-                    Informatics Engineering Student
-                  </p>
-                  <p class="text-gray-600">Universitas Trunojoyo Madura</p>
+
+                  <div class="relative z-10 text-center">
+                    <div
+                      class="w-32 h-32 bg-white/20 backdrop-blur-sm rounded-full mx-auto mb-6 flex items-center justify-center relative"
+                    >
+                      <i class="fas fa-user text-white text-4xl"></i>
+                      <div
+                        class="absolute -top-0 -right-0 w-8 h-8 bg-green-400 rounded-full flex items-center justify-center"
+                      >
+                        <i class="fas fa-check text-white text-sm"></i>
+                      </div>
+                    </div>
+
+                    <h3 class="text-2xl font-bold mb-2">
+                      Ahmad Ramadani Bahri
+                    </h3>
+                    <p class="text-blue-100 mb-2 font-medium">
+                      Informatics Engineering Student
+                    </p>
+                    <p class="text-blue-200 text-sm mb-6">
+                      Universitas Trunojoyo Madura
+                    </p>
+
+                    <!-- Quick Stats -->
+                    <div class="grid grid-cols-2 gap-4 mb-6">
+                      <div class="bg-white/10 backdrop-blur-sm rounded-lg p-3">
+                        <div class="text-lg font-bold">GPA</div>
+                        <div class="text-sm opacity-90">3+</div>
+                      </div>
+                      <div class="bg-white/10 backdrop-blur-sm rounded-lg p-3">
+                        <div class="text-lg font-bold">Semester</div>
+                        <div class="text-sm opacity-90">6th</div>
+                      </div>
+                    </div>
+
+                    <!-- Social Links -->
+                    <div class="flex justify-center space-x-4">
+                      <a
+                        href="https://github.com/danibahri"
+                        target="_blank"
+                        class="w-10 h-10 bg-white/20 backdrop-blur-sm rounded-lg flex items-center justify-center hover:bg-white/30 transition-colors"
+                      >
+                        <i class="fab fa-github"></i>
+                      </a>
+                      <a
+                        href="https://www.linkedin.com/in/ahmad-ramadani-bahri-44468a373/"
+                        target="_blank"
+                        class="w-10 h-10 bg-white/20 backdrop-blur-sm rounded-lg flex items-center justify-center hover:bg-white/30 transition-colors"
+                      >
+                        <i class="fab fa-linkedin-in"></i>
+                      </a>
+                      <a
+                        href="https://www.instagram.com/danibahri_/"
+                        target="_blank"
+                        class="w-10 h-10 bg-white/20 backdrop-blur-sm rounded-lg flex items-center justify-center hover:bg-white/30 transition-colors"
+                      >
+                        <i class="fab fa-instagram"></i>
+                      </a>
+                      <a
+                        href="mailto:danibahri45@gmail.com"
+                        class="w-10 h-10 bg-white/20 backdrop-blur-sm rounded-lg flex items-center justify-center hover:bg-white/30 transition-colors"
+                      >
+                        <i class="fas fa-envelope"></i>
+                      </a>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
@@ -525,197 +791,397 @@
       </section>
 
       <!-- Projects Section -->
-      <section id="projects" class="py-16 bg-white">
+      <section
+        id="projects"
+        class="py-20 bg-gradient-to-br from-gray-50 via-white to-blue-50"
+      >
         <div class="container mx-auto px-4">
-          <div class="max-w-6xl mx-auto">
-            <h2
-              class="text-3xl md:text-4xl font-bold text-center text-gray-900 mb-8"
-            >
-              Featured Projects
-            </h2>
+          <div class="max-w-7xl mx-auto">
+            <!-- Section Header with Statistics -->
+            <div class="text-center mb-16">
+              <div
+                class="inline-flex items-center justify-center px-6 py-3 mb-6 bg-blue-100 text-blue-800 rounded-full font-semibold text-sm"
+              >
+                <i class="fas fa-code mr-2"></i>
+                Portfolio Showcase
+              </div>
+              <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
+                Featured <span class="text-blue-600">Projects</span>
+              </h2>
+              <p class="text-xl text-gray-600 mb-8 max-w-3xl mx-auto">
+                Showcasing real-world applications and professional solutions
+                I've built
+              </p>
 
-            <div class="grid md:grid-cols-2 gap-8">
+              <!-- Project Counter -->
+              <div class="flex justify-center items-center space-x-8 mb-8">
+                <div class="text-center">
+                  <div
+                    class="text-4xl font-bold text-blue-600 counter-projects"
+                    data-counter="18"
+                  >
+                    0
+                  </div>
+                  <div class="text-sm text-gray-500 uppercase tracking-wider">
+                    Completed Projects
+                  </div>
+                </div>
+                <div class="w-px h-12 bg-gray-300"></div>
+                <div class="text-center">
+                  <div class="text-4xl font-bold text-purple-600">4</div>
+                  <div class="text-sm text-gray-500 uppercase tracking-wider">
+                    Featured Projects
+                  </div>
+                </div>
+                <div class="w-px h-12 bg-gray-300"></div>
+                <div class="text-center">
+                  <div class="text-4xl font-bold text-green-600">100%</div>
+                  <div class="text-sm text-gray-500 uppercase tracking-wider">
+                    Client Satisfaction
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="grid lg:grid-cols-2 gap-8">
               <!-- Project 1 -->
               <div
-                class="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300"
+                class="group project-card bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-2xl transition-all duration-300 border border-gray-100"
               >
-                <div class="p-6">
-                  <div class="flex items-center justify-between mb-4">
-                    <h3 class="text-xl font-bold text-gray-900">
-                      Recruitment Komisi-Informasi Sumenep
-                    </h3>
+                <div class="p-8">
+                  <div class="flex items-start justify-between mb-6">
+                    <div class="flex-1">
+                      <div class="flex items-center mb-3">
+                        <div
+                          class="w-12 h-12 bg-gradient-to-br from-red-500 to-red-600 rounded-xl flex items-center justify-center mr-4"
+                        >
+                          <i class="fas fa-building text-white text-xl"></i>
+                        </div>
+                        <div>
+                          <h3
+                            class="text-xl font-bold text-gray-900 group-hover:text-blue-600 transition-colors"
+                          >
+                            Recruitment Komisi-Informasi Sumenep
+                          </h3>
+                          <div class="text-sm text-gray-500">
+                            Government Platform
+                          </div>
+                        </div>
+                      </div>
+                      <p class="text-gray-600 mb-6 leading-relaxed">
+                        Professional recruitment platform for government
+                        commission with advanced security, compliance features,
+                        and multi-role user management system.
+                      </p>
+                    </div>
                     <a
                       href="https://seleksi-ki.sumenepkab.go.id/"
                       target="_blank"
-                      class="text-blue-600 hover:text-blue-800"
+                      class="ml-4 w-10 h-10 bg-blue-100 hover:bg-blue-600 text-blue-600 hover:text-white rounded-lg flex items-center justify-center transition-all duration-300"
                     >
                       <i class="fas fa-external-link-alt"></i>
                     </a>
                   </div>
-                  <p class="text-gray-600 mb-4">
-                    Professional recruitment platform for government commission
-                    with advanced security and compliance features.
-                  </p>
-                  <div class="flex flex-wrap gap-2 mb-4">
+
+                  <div class="flex flex-wrap gap-2 mb-6">
                     <span
-                      class="px-3 py-1 bg-red-100 text-red-800 text-xs rounded-full"
+                      class="px-3 py-1 bg-red-100 text-red-700 text-sm rounded-lg font-medium"
                       >Laravel</span
                     >
                     <span
-                      class="px-3 py-1 bg-yellow-100 text-yellow-800 text-xs rounded-full"
+                      class="px-3 py-1 bg-yellow-100 text-yellow-700 text-sm rounded-lg font-medium"
                       >Filament</span
                     >
                     <span
-                      class="px-3 py-1 bg-blue-100 text-blue-800 text-xs rounded-full"
+                      class="px-3 py-1 bg-blue-100 text-blue-700 text-sm rounded-lg font-medium"
                       >MySQL</span
                     >
                     <span
-                      class="px-3 py-1 bg-cyan-100 text-cyan-800 text-xs rounded-full"
+                      class="px-3 py-1 bg-cyan-100 text-cyan-700 text-sm rounded-lg font-medium"
                       >Tailwind</span
                     >
                   </div>
-                  <ul class="text-sm text-gray-600 space-y-1">
-                    <li>1. Government-grade security & compliance</li>
-                    <li>2. Advanced admin dashboard with Filament</li>
-                    <li>3. Multi-role user management system</li>
-                    <li>4. Dynamic form builder & validation</li>
-                  </ul>
+
+                  <div class="space-y-2">
+                    <div class="flex items-center text-sm text-gray-600">
+                      <i class="fas fa-check-circle text-green-500 mr-3"></i>
+                      Government-grade security & compliance
+                    </div>
+                    <div class="flex items-center text-sm text-gray-600">
+                      <i class="fas fa-check-circle text-green-500 mr-3"></i>
+                      Advanced admin dashboard with Filament
+                    </div>
+                    <div class="flex items-center text-sm text-gray-600">
+                      <i class="fas fa-check-circle text-green-500 mr-3"></i>
+                      Multi-role user management system
+                    </div>
+                    <div class="flex items-center text-sm text-gray-600">
+                      <i class="fas fa-check-circle text-green-500 mr-3"></i>
+                      Dynamic form builder & validation
+                    </div>
+                  </div>
                 </div>
               </div>
 
               <!-- Project 2 -->
               <div
-                class="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300"
+                class="group project-card bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-2xl transition-all duration-300 border border-gray-100"
               >
-                <div class="p-6">
-                  <div class="flex items-center justify-between mb-4">
-                    <h3 class="text-xl font-bold text-gray-900">
-                      LEPEH - Digital Laundry Management
-                    </h3>
+                <div class="p-8">
+                  <div class="flex items-start justify-between mb-6">
+                    <div class="flex-1">
+                      <div class="flex items-center mb-3">
+                        <div
+                          class="w-12 h-12 bg-gradient-to-br from-purple-500 to-purple-600 rounded-xl flex items-center justify-center mr-4"
+                        >
+                          <i class="fas fa-tshirt text-white text-xl"></i>
+                        </div>
+                        <div>
+                          <h3
+                            class="text-xl font-bold text-gray-900 group-hover:text-blue-600 transition-colors"
+                          >
+                            Medical Record Management System
+                          </h3>
+                          <div class="text-sm text-gray-500">
+                            Medical Record Management with 3 Roles
+                          </div>
+                        </div>
+                      </div>
+                      <p class="text-gray-600 mb-6 leading-relaxed">
+                        Comprehensive medical record management system with
+                        multi-role access, real-time queue management, and
+                        advanced analytics for healthcare providers.
+                      </p>
+                    </div>
                     <a
-                      href="https://github.com/danibahri/E-Laundry"
+                      href="https://github.com/danibahri/rekam-medis"
                       target="_blank"
-                      class="text-blue-600 hover:text-blue-800"
+                      class="ml-4 w-10 h-10 bg-gray-100 hover:bg-gray-800 text-gray-600 hover:text-white rounded-lg flex items-center justify-center transition-all duration-300"
                     >
                       <i class="fab fa-github"></i>
                     </a>
                   </div>
-                  <p class="text-gray-600 mb-4">
-                    Complete SaaS solution for laundry business management with
-                    multi-tenant architecture.
-                  </p>
-                  <div class="flex flex-wrap gap-2 mb-4">
+
+                  <div class="flex flex-wrap gap-2 mb-6">
                     <span
-                      class="px-3 py-1 bg-red-100 text-red-800 text-xs rounded-full"
+                      class="px-3 py-1 bg-red-100 text-red-700 text-sm rounded-lg font-medium"
                       >Laravel</span
                     >
                     <span
-                      class="px-3 py-1 bg-blue-100 text-blue-800 text-xs rounded-full"
+                      class="px-3 py-1 bg-blue-100 text-blue-700 text-sm rounded-lg font-medium"
                       >MySQL</span
                     >
                     <span
-                      class="px-3 py-1 bg-purple-100 text-purple-800 text-xs rounded-full"
-                      >Bootstrap</span
+                      class="px-3 py-1 bg-purple-100 text-purple-700 text-sm rounded-lg font-medium"
+                      >Tailwind CSS</span
                     >
                     <span
-                      class="px-3 py-1 bg-yellow-100 text-yellow-800 text-xs rounded-full"
+                      class="px-3 py-1 bg-yellow-100 text-yellow-700 text-sm rounded-lg font-medium"
                       >JavaScript</span
                     >
                   </div>
-                  <ul class="text-sm text-gray-600 space-y-1">
-                    <li>1. Multi-tenant architecture (User, Worker, Admin)</li>
-                    <li>2. Progressive Web App (PWA) features</li>
-                    <li>3. Real-time order tracking system</li>
-                    <li>4. Comprehensive revenue analytics</li>
-                  </ul>
+
+                  <div class="space-y-2">
+                    <div class="flex items-center text-sm text-gray-600">
+                      <i class="fas fa-check-circle text-green-500 mr-3"></i>
+                      Multi-role access control (Admin, Doctor, Officer)
+                    </div>
+                    <div class="flex items-center text-sm text-gray-600">
+                      <i class="fas fa-check-circle text-green-500 mr-3"></i>
+                      Dynamic dashboard with real-time analytics
+                    </div>
+                    <div class="flex items-center text-sm text-gray-600">
+                      <i class="fas fa-check-circle text-green-500 mr-3"></i>
+                      Real-time queue management system
+                    </div>
+                    <div class="flex items-center text-sm text-gray-600">
+                      <i class="fas fa-check-circle text-green-500 mr-3"></i>
+                      Dynamic form builder for medical records
+                    </div>
+                  </div>
                 </div>
               </div>
 
               <!-- Project 3 -->
               <div
-                class="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300"
+                class="group project-card bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-2xl transition-all duration-300 border border-gray-100"
               >
-                <div class="p-6">
-                  <div class="flex items-center justify-between mb-4">
-                    <h3 class="text-xl font-bold text-gray-900">
-                      AnimeFly - Streaming Platform
-                    </h3>
+                <div class="p-8">
+                  <div class="flex items-start justify-between mb-6">
+                    <div class="flex-1">
+                      <div class="flex items-center mb-3">
+                        <div
+                          class="w-12 h-12 bg-gradient-to-br from-blue-500 to-blue-600 rounded-xl flex items-center justify-center mr-4"
+                        >
+                          <i class="fas fa-play text-white text-xl"></i>
+                        </div>
+                        <div>
+                          <h3
+                            class="text-xl font-bold text-gray-900 group-hover:text-blue-600 transition-colors"
+                          >
+                            AnimeFly - Streaming Platform
+                          </h3>
+                          <div class="text-sm text-gray-500">
+                            Video Streaming Platform
+                          </div>
+                        </div>
+                      </div>
+                      <p class="text-gray-600 mb-6 leading-relaxed">
+                        Modern video streaming web application with
+                        high-performance streaming capabilities, advanced
+                        search, and responsive design.
+                      </p>
+                    </div>
                     <a
                       href="https://animefly-six.vercel.app/"
                       target="_blank"
-                      class="text-blue-600 hover:text-blue-800"
+                      class="ml-4 w-10 h-10 bg-blue-100 hover:bg-blue-600 text-blue-600 hover:text-white rounded-lg flex items-center justify-center transition-all duration-300"
                     >
                       <i class="fas fa-external-link-alt"></i>
                     </a>
                   </div>
-                  <p class="text-gray-600 mb-4">
-                    Modern video streaming web application with high-performance
-                    video streaming capabilities.
-                  </p>
-                  <div class="flex flex-wrap gap-2 mb-4">
+
+                  <div class="flex flex-wrap gap-2 mb-6">
                     <span
-                      class="px-3 py-1 bg-gray-100 text-gray-800 text-xs rounded-full"
+                      class="px-3 py-1 bg-gray-100 text-gray-700 text-sm rounded-lg font-medium"
                       >Flask</span
                     >
                     <span
-                      class="px-3 py-1 bg-blue-100 text-blue-800 text-xs rounded-full"
+                      class="px-3 py-1 bg-blue-100 text-blue-700 text-sm rounded-lg font-medium"
                       >Python</span
                     >
                     <span
-                      class="px-3 py-1 bg-yellow-100 text-yellow-800 text-xs rounded-full"
+                      class="px-3 py-1 bg-yellow-100 text-yellow-700 text-sm rounded-lg font-medium"
                       >JavaScript</span
                     >
                   </div>
-                  <ul class="text-sm text-gray-600 space-y-1">
-                    <li>1. High-performance video streaming</li>
-                    <li>2. Advanced search & filtering system</li>
-                    <li>3. Responsive video player</li>
-                    <li>4. Modern UI/UX design</li>
-                  </ul>
+
+                  <div class="space-y-2">
+                    <div class="flex items-center text-sm text-gray-600">
+                      <i class="fas fa-check-circle text-green-500 mr-3"></i>
+                      High-performance video streaming
+                    </div>
+                    <div class="flex items-center text-sm text-gray-600">
+                      <i class="fas fa-check-circle text-green-500 mr-3"></i>
+                      Advanced search & filtering system
+                    </div>
+                    <div class="flex items-center text-sm text-gray-600">
+                      <i class="fas fa-check-circle text-green-500 mr-3"></i>
+                      Responsive video player
+                    </div>
+                    <div class="flex items-center text-sm text-gray-600">
+                      <i class="fas fa-check-circle text-green-500 mr-3"></i>
+                      Modern UI/UX design
+                    </div>
+                  </div>
                 </div>
               </div>
 
               <!-- Project 4 -->
               <div
-                class="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300"
+                class="group project-card bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-2xl transition-all duration-300 border border-gray-100"
               >
-                <div class="p-6">
-                  <div class="flex items-center justify-between mb-4">
-                    <h3 class="text-xl font-bold text-gray-900">
-                      Tourism Sentiment Analysis
-                    </h3>
+                <div class="p-8">
+                  <div class="flex items-start justify-between mb-6">
+                    <div class="flex-1">
+                      <div class="flex items-center mb-3">
+                        <div
+                          class="w-12 h-12 bg-gradient-to-br from-green-500 to-green-600 rounded-xl flex items-center justify-center mr-4"
+                        >
+                          <i class="fas fa-chart-line text-white text-xl"></i>
+                        </div>
+                        <div>
+                          <h3
+                            class="text-xl font-bold text-gray-900 group-hover:text-blue-600 transition-colors"
+                          >
+                            Tourism Sentiment Analysis
+                          </h3>
+                          <div class="text-sm text-gray-500">
+                            Machine Learning Platform
+                          </div>
+                        </div>
+                      </div>
+                      <p class="text-gray-600 mb-6 leading-relaxed">
+                        Interactive web application for sentiment analysis with
+                        real-time processing, dynamic visualizations, and ML
+                        analytics.
+                      </p>
+                    </div>
                     <a
                       href="https://sentiment-analysis-parawisata.streamlit.app/"
                       target="_blank"
-                      class="text-blue-600 hover:text-blue-800"
+                      class="ml-4 w-10 h-10 bg-blue-100 hover:bg-blue-600 text-blue-600 hover:text-white rounded-lg flex items-center justify-center transition-all duration-300"
                     >
                       <i class="fas fa-external-link-alt"></i>
                     </a>
                   </div>
-                  <p class="text-gray-600 mb-4">
-                    Interactive web application for sentiment analysis with
-                    real-time processing capabilities.
-                  </p>
-                  <div class="flex flex-wrap gap-2 mb-4">
+
+                  <div class="flex flex-wrap gap-2 mb-6">
                     <span
-                      class="px-3 py-1 bg-blue-100 text-blue-800 text-xs rounded-full"
+                      class="px-3 py-1 bg-blue-100 text-blue-700 text-sm rounded-lg font-medium"
                       >Python</span
                     >
                     <span
-                      class="px-3 py-1 bg-red-100 text-red-800 text-xs rounded-full"
+                      class="px-3 py-1 bg-red-100 text-red-700 text-sm rounded-lg font-medium"
                       >Streamlit</span
                     >
                     <span
-                      class="px-3 py-1 bg-orange-100 text-orange-800 text-xs rounded-full"
+                      class="px-3 py-1 bg-orange-100 text-orange-700 text-sm rounded-lg font-medium"
                       >ML</span
                     >
                   </div>
-                  <ul class="text-sm text-gray-600 space-y-1">
-                    <li>1. Real-time sentiment analysis engine</li>
-                    <li>2. Interactive data visualizations</li>
-                    <li>3. Aspect-based sentiment classification</li>
-                    <li>4. Dynamic charts and analytics</li>
-                  </ul>
+
+                  <div class="space-y-2">
+                    <div class="flex items-center text-sm text-gray-600">
+                      <i class="fas fa-check-circle text-green-500 mr-3"></i>
+                      Real-time sentiment analysis engine
+                    </div>
+                    <div class="flex items-center text-sm text-gray-600">
+                      <i class="fas fa-check-circle text-green-500 mr-3"></i>
+                      Interactive data visualizations
+                    </div>
+                    <div class="flex items-center text-sm text-gray-600">
+                      <i class="fas fa-check-circle text-green-500 mr-3"></i>
+                      Aspect-based sentiment classification
+                    </div>
+                    <div class="flex items-center text-sm text-gray-600">
+                      <i class="fas fa-check-circle text-green-500 mr-3"></i>
+                      Dynamic charts and analytics
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Call to Action -->
+            <div class="text-center mt-16">
+              <div
+                class="bg-gradient-to-r from-blue-600 to-purple-600 rounded-2xl p-8 text-white"
+              >
+                <h3 class="text-2xl font-bold mb-4">
+                  Interested in Working Together?
+                </h3>
+                <p class="text-blue-100 mb-6 max-w-2xl mx-auto">
+                  I'm always excited to take on new challenges and collaborate
+                  on innovative projects. Let's create something amazing
+                  together!
+                </p>
+                <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                  <a
+                    href="#contact"
+                    class="inline-flex items-center px-6 py-3 bg-white text-blue-600 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
+                  >
+                    <i class="fas fa-envelope mr-2"></i>
+                    Get In Touch
+                  </a>
+                  <a
+                    href="https://github.com/danibahri"
+                    target="_blank"
+                    class="inline-flex items-center px-6 py-3 bg-transparent border-2 border-white text-white rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors"
+                  >
+                    <i class="fab fa-github mr-2"></i>
+                    View All Projects
+                  </a>
                 </div>
               </div>
             </div>
@@ -793,6 +1259,20 @@
 
     <script src="./src/flowbite.min.js"></script>
     <script>
+      function animateCounter(element, target, duration = 2000) {
+        let start = 0;
+        const increment = target / (duration / 16);
+        const timer = setInterval(() => {
+          start += increment;
+          if (start >= target) {
+            start = target;
+            clearInterval(timer);
+          }
+          element.textContent = Math.floor(start);
+        }, 16);
+      }
+
+      // Enhanced typing animation
       const typingText = document.getElementById("typing-text");
       const texts = [
         "Junior Web Developer",
@@ -800,6 +1280,7 @@
         "Laravel & PHP Enthusiast",
         "Informatics Engineering Student",
       ];
+
       let currentTextIndex = 0;
       let charIndex = 0;
       let isDeleting = false;
@@ -828,7 +1309,108 @@
         setTimeout(typeText, typingSpeed);
       }
 
-      typeText();
+      document.addEventListener("DOMContentLoaded", function () {
+        typeText();
+
+        const counterObserver = new IntersectionObserver(
+          (entries) => {
+            entries.forEach((entry) => {
+              if (entry.isIntersecting) {
+                const counters =
+                  entry.target.querySelectorAll("[data-counter]");
+                counters.forEach((counter) => {
+                  const target = parseInt(counter.getAttribute("data-counter"));
+                  const currentValue = parseInt(counter.textContent);
+                  if (currentValue === 0) {
+                    animateCounter(counter, target);
+                  }
+                });
+
+                if (entry.target.hasAttribute("data-counter")) {
+                  const target = parseInt(
+                    entry.target.getAttribute("data-counter")
+                  );
+                  const currentValue = parseInt(entry.target.textContent);
+                  if (currentValue === 0) {
+                    animateCounter(entry.target, target);
+                  }
+                }
+              }
+            });
+          },
+          { threshold: 0.5 }
+        );
+
+        document
+          .querySelectorAll("[data-counter]")
+          .forEach((el) => counterObserver.observe(el));
+        document
+          .querySelectorAll(
+            ".counter-projects, .counter-experience, .counter-skills"
+          )
+          .forEach((el) => counterObserver.observe(el));
+
+        const projectCards = document.querySelectorAll(".project-card");
+        projectCards.forEach((card) => {
+          card.addEventListener("mouseenter", function () {
+            this.style.transform = "translateY(-12px) scale(1.02)";
+            this.style.boxShadow = "0 25px 50px rgba(0, 0, 0, 0.15)";
+          });
+
+          card.addEventListener("mouseleave", function () {
+            this.style.transform = "translateY(0) scale(1)";
+            this.style.boxShadow = "";
+          });
+        });
+
+        const heroSection = document.querySelector(".hero-gradient");
+        if (heroSection) {
+          let mouseX = 0,
+            mouseY = 0;
+
+          heroSection.addEventListener("mousemove", (e) => {
+            mouseX = e.clientX / window.innerWidth;
+            mouseY = e.clientY / window.innerHeight;
+
+            const gradientX = mouseX * 100;
+            const gradientY = mouseY * 100;
+
+            heroSection.style.background = `
+              radial-gradient(circle at ${gradientX}% ${gradientY}%, 
+                rgba(59, 130, 246, 0.15) 0%, 
+                rgba(139, 92, 246, 0.1) 50%, 
+                transparent 100%),
+              linear-gradient(135deg, 
+                rgba(15, 23, 42, 0.95) 0%, 
+                rgba(30, 41, 59, 0.9) 100%)
+            `;
+          });
+        }
+
+        const profileImg = document.querySelector(".profile-image");
+        if (profileImg) {
+          profileImg.classList.add("float-animation");
+        }
+
+        const animationObserver = new IntersectionObserver(
+          (entries) => {
+            entries.forEach((entry) => {
+              if (entry.isIntersecting) {
+                entry.target.style.opacity = "1";
+                entry.target.style.transform = "translateY(0)";
+              }
+            });
+          },
+          { threshold: 0.1 }
+        );
+
+        document.querySelectorAll("section").forEach((section) => {
+          section.style.opacity = "0";
+          section.style.transform = "translateY(30px)";
+          section.style.transition = "opacity 0.8s ease, transform 0.8s ease";
+          animationObserver.observe(section);
+        });
+      });
 
       document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
         anchor.addEventListener("click", function (e) {
@@ -845,12 +1427,36 @@
 
       window.addEventListener("scroll", function () {
         const header = document.querySelector("header");
+        const navbar = document.querySelector("nav");
+
         if (window.scrollY > 100) {
           header.classList.add("shadow-lg");
+          if (navbar) {
+            navbar.classList.add("backdrop-blur-md", "bg-white/95");
+          }
         } else {
           header.classList.remove("shadow-lg");
+          if (navbar) {
+            navbar.classList.remove("backdrop-blur-md", "bg-white/95");
+          }
+        }
+
+        const heroSection = document.querySelector(".hero-gradient");
+        if (heroSection) {
+          const scrolled = window.pageYOffset;
+          const parallax = scrolled * 0.5;
+          heroSection.style.transform = `translateY(${parallax}px)`;
         }
       });
+
+      window.addEventListener("load", function () {
+        document.body.style.opacity = "1";
+        document.body.style.transform = "translateY(0)";
+      });
+
+      document.body.style.opacity = "0";
+      document.body.style.transform = "translateY(20px)";
+      document.body.style.transition = "opacity 0.8s ease, transform 0.8s ease";
     </script>
   </body>
 </html>
